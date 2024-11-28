@@ -1,8 +1,12 @@
 from huggingface_hub import InferenceClient
+import dotenv
+import os
 
-promp = input("¿Qu quieres preguntar?")
+dotenv.load_dotenv()
+TOKEN = os.getenv("TOKEN")
+promp = input("¿Qué quieres preguntar?")
 
-client = InferenceClient(api_key="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")
+client = InferenceClient(api_key=TOKEN)
 
 messages = [
 	{
