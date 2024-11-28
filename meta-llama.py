@@ -1,11 +1,13 @@
 from huggingface_hub import InferenceClient
 
+promp = input("¿Qu quieres preguntar?")
+
 client = InferenceClient(api_key="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")
 
 messages = [
 	{
 		"role": "user",
-		"content": "What is the capital of France?"
+		"content": promp
 	}
 ]
 
